@@ -1,4 +1,4 @@
-import { Github, Database, Server, Lock, ArrowRight } from 'lucide-react';
+import { Github, Database, Server, Lock, ArrowRight, Layers } from 'lucide-react';
 
 const projects = [
   {
