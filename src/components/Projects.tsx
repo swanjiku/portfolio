@@ -2,6 +2,14 @@ import { Github, Database, Server, Lock, ArrowRight } from 'lucide-react';
 
 const projects = [
   {
+  title: 'Event-Driven JWT Microservices',
+  description: 'A production-ready, event-driven microservices system with JWT authentication, real-time notifications, centralized monitoring, and robust service discovery. Built with Spring Cloud, Eureka, Redis, MongoDB, and WebSocket.',
+  image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60', // or any image you prefer
+  icon: <Layers className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
+  github: 'https://github.com/swanjiku/eventdriven-jwt-microservices',
+  techStack: ['Spring Cloud', 'JWT', 'Redis', 'MongoDB', 'WebSocket', 'Java']
+  },
+  {
     title: 'Distributed Cache System',
     description: 'High-performance distributed caching solution built with Redis and Spring Boot, optimized to handle high traffic loads and ensure low-latency responses even during peak usage.',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
