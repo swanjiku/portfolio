@@ -3,47 +3,62 @@ import { Github, Database, Server, Lock, ArrowRight, Layers } from 'lucide-react
 const projects = [
   {
     title: 'Event-Driven JWT Microservices',
-    description: 'A production-ready, event-driven microservices system with JWT authentication, real-time notifications, centralized monitoring, and robust service discovery. Built with Spring Cloud, Eureka, Redis, MongoDB, and WebSocket.',
+    description: 'A robust, production-ready microservices system implementing JWT authentication and authorization using Spring Cloud, Eureka, Redis, MongoDB, and WebSocket. Demonstrates scalable, event-driven architecture with centralized monitoring and real-time notifications.',
     image: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     icon: <Layers className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
     github: 'https://github.com/swanjiku/eventdriven-jwt-microservices',
-    techStack: ['Spring Cloud', 'JWT', 'Redis', 'MongoDB', 'WebSocket', 'Java'],
-    challenges: 'Designing a scalable event-driven architecture, ensuring secure JWT authentication across services, and implementing real-time notifications with minimal latency.',
-    solutions: 'Leveraged Spring Cloud for microservices orchestration, implemented centralized JWT authentication, and used Redis Pub/Sub with WebSocket for real-time updates.',
-    features: ['Event-Driven', 'JWT Auth', 'Real-Time', 'Monitoring', 'Service Discovery']
+    techStack: ['Spring Boot 3+', 'Spring Cloud Gateway', 'Eureka Discovery', 'Spring Security', 'JWT', 'Redis', 'MongoDB', 'WebSocket', 'Resilience4j', 'Prometheus', 'Grafana'],
+    features: [
+      'JWT Authentication & RBAC',
+      'Centralized API Gateway Security',
+      'Service Discovery (Eureka)',
+      'Real-Time Event-Based Notifications',
+      'Centralized Monitoring (Prometheus + Grafana)',
+      'Circuit Breaker, Retry, and Fault Tolerance',
+    ],
   },
   {
     title: 'Distributed Cache System',
-    description: 'High-performance distributed caching solution built with Redis and Spring Boot, optimized to handle high traffic loads and ensure low-latency responses even during peak usage.',
+    description: 'High-performance distributed caching solution built with Redis and Spring Boot, optimized for high traffic and low-latency responses. Ensures cache consistency and failover in distributed environments.',
     image: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     icon: <Database className="w-6 h-6 text-blue-600 dark:text-blue-400" />, 
     github: 'https://github.com/swanjiku/distributed-cache-system',
-    techStack: ['Redis', 'Spring Boot', 'Java'],
-    challenges: 'Handling cache consistency and failover in a distributed environment.',
-    solutions: 'Implemented Redis Sentinel for high availability and used cache invalidation strategies to maintain consistency.',
-    features: ['Distributed', 'High Availability', 'Low Latency']
+    techStack: ['Redis', 'Spring Boot', 'Java', 'Docker'],
+    features: [
+      'Distributed Cache',
+      'High Availability (Redis Sentinel)',
+      'Cache Invalidation Strategies',
+      'Low Latency',
+    ],
   },
   {
-    title: 'Microservices Architecture',
-    description: 'Microservices platform with modular services for user authentication, post management, and comments, featuring secure JWT authentication and seamless inter-service communication.',
+    title: 'Microservices Social Platform',
+    description: 'Microservices platform for user authentication, post management, and comments. Features secure JWT-based authentication, seamless inter-service communication, and an API Gateway for unified routing.',
     image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     icon: <Server className="w-6 h-6 text-blue-600 dark:text-blue-400" />, 
-    github: 'https://github.com/swanjiku/microservices-architecture',
-    techStack: ['Spring Cloud', 'Spring Boot', 'Java'],
-    challenges: 'Ensuring secure and efficient communication between services and managing authentication.',
-    solutions: 'Adopted JWT for secure service-to-service communication and used Spring Cloud for service discovery.',
-    features: ['Modular', 'JWT Auth', 'Service Discovery']
+    github: 'https://github.com/swanjiku/microservices-social-platform',
+    techStack: ['Spring Boot', 'Spring Cloud', 'JWT', 'Docker', 'REST APIs'],
+    features: [
+      'User Authentication (JWT)',
+      'Post & Comment Management',
+      'API Gateway Routing',
+      'Inter-Service Communication',
+      'Containerized with Docker',
+    ],
   },
   {
     title: 'API Security Gateway',
-    description: 'A robust API gateway offering secure JWT authentication, rate-limiting configurations, real-time threat detection, and seamless integration to ensure secure and efficient API management.',
+    description: 'A robust API gateway offering secure JWT authentication, rate-limiting, real-time threat detection, and seamless integration for secure and efficient API management.',
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
     icon: <Lock className="w-6 h-6 text-blue-600 dark:text-blue-400" />, 
     github: 'https://github.com/swanjiku/api-security-gateway',
-    techStack: ['JWT', 'Spring Boot', 'Java'],
-    challenges: 'Implementing robust security measures and real-time threat detection without impacting performance.',
-    solutions: 'Integrated JWT authentication, rate-limiting, and real-time monitoring for threats.',
-    features: ['JWT Auth', 'Rate Limiting', 'Threat Detection']
+    techStack: ['Spring Boot', 'JWT', 'Bucket4j', 'Java'],
+    features: [
+      'JWT Authentication',
+      'Rate Limiting (Bucket4j)',
+      'Real-Time Threat Detection',
+      'IP Blocklisting',
+    ],
   },
 ];
 
@@ -71,14 +86,6 @@ const Projects = () => {
                   ))}
                 </div>
                 <p className="text-gray-600 dark:text-gray-300 mb-2">{project.description}</p>
-                <div className="mb-2">
-                  <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Challenges:</span>
-                  <span className="block text-gray-800 dark:text-gray-100 mb-1">{project.challenges}</span>
-                </div>
-                <div className="mb-4">
-                  <span className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Solutions:</span>
-                  <span className="block text-gray-800 dark:text-gray-100 mb-1">{project.solutions}</span>
-                </div>
                 <div className="mb-4">
                   <div className="flex flex-wrap gap-2">
                     {project.techStack.map((tech, techIndex) => (

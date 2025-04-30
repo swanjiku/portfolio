@@ -10,10 +10,10 @@ const About = () => {
           </div>
           <div className="md:w-1/2 md:pl-10">
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-              Hi, I'm Sophia W., a passionate backend engineer with 5 years of experience in distributed systems and cloud architecture. I specialize in building scalable, resilient microservices and designing robust APIs that power modern applications.
+              Hi, I'm Sophia W., an advanced backend engineer specializing in distributed systems, microservices, and cloud-native architectures. My expertise spans Spring Boot, Redis, MongoDB, and real-time event-driven solutions. I’m passionate about building resilient systems with robust API security, monitoring, and observability using tools like Prometheus and Grafana.
             </p>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed mt-4">
-              My expertise includes optimizing database performance, implementing caching strategies, and ensuring system security. I'm particularly interested in solving complex architectural challenges and building systems that can handle millions of requests efficiently.
+              I thrive on solving complex architectural challenges and collaborating with teams to deliver scalable, high-performance platforms. My focus is on optimizing database performance, implementing effective caching strategies, and ensuring system security for modern, high-demand applications.
             </p>
           </div>
         </div>

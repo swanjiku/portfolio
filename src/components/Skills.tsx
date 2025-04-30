@@ -2,34 +2,74 @@ import { CheckCircle, Database, Server, Shield, Code, Cloud, Wrench } from 'luci
 
 const skillCategories = [
   {
-    title: 'Backend Development',
+    title: 'Backend & Microservices',
     icon: <Server className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-    skills: ['Java', 'Python', 'Node.js'],
+    skills: [
+      'Java',
+      'Spring Boot',
+      'Spring Cloud',
+      'Eureka',
+      'Resilience4j',
+      'WebSocket',
+      // 'Node.js',
+      // 'Python',
+      'REST APIs',
+      'GraphQL',
+    ],
+  },
+  {
+    title: 'Distributed Systems & Observability',
+    icon: <Cloud className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
+    skills: [
+      'Event-Driven Architecture',
+      'Pub/Sub & Stream Processing',
+      'Redis Streams',
+      'Prometheus',
+      'Grafana',
+      'Docker',
+      'Docker Compose',
+      // 'CI/CD (GitHub Actions, Jenkins)',
+    ],
   },
   {
     title: 'Databases',
     icon: <Database className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-    skills: ['PostgreSQL', 'MongoDB', 'Redis'],
+    skills: [
+      'PostgreSQL',
+      'MongoDB',
+      'Redis',
+    ],
   },
   {
     title: 'Security',
     icon: <Shield className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-    skills: ['JWT', 'SSL/TLS', 'Security Auditing'],
+    skills: [
+      'JWT',
+      // 'OAuth2',
+      // 'SSL/TLS',
+      'Rate Limiting (Bucket4j)',
+      'Threat Detection & IP Blocklisting',
+      'Security Auditing',
+    ],
   },
   {
-    title: 'API Design',
+    title: 'API Design & Gateway',
     icon: <Code className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-    skills: ['REST', 'Swagger/OpenAPI'],
+    skills: [
+      'REST',
+      'Swagger/OpenAPI',
+      'API Gateway',
+    ],
   },
   {
-    title: 'Cloud & DevOps',
-    icon: <Cloud className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-    skills: ['Docker', 'CI/CD'],
-  },
-  {
-    title: 'Tools & Testing',
+    title: 'Testing & Tools',
     icon: <Wrench className="w-6 h-6 text-blue-600 dark:text-blue-400" />,
-    skills: ['Git', 'Postman'],
+    skills: [
+      'JUnit',
+      'Mockito',
+      'Git',
+      'Postman',
+    ],
   },
 ];
 

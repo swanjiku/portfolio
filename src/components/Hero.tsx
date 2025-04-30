@@ -11,7 +11,7 @@ const Hero = () => {
         <h1 className="text-4xl font-bold mb-4">Sophia W.</h1>
         <p className="text-xl mb-4">Backend Engineer & System Architect</p>
         <p className="text-lg mb-8 max-w-2xl mx-auto">
-          Specializing in scalable systems, microservices architecture, and cloud infrastructure
+          Building resilient, event-driven architectures and real-time backend solutions.
         </p>
         <div className="flex justify-center space-x-6">
           <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-200 transition-colors duration-200">
